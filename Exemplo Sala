@@ -1,0 +1,27 @@
+package Lista1;
+
+import java.util.Scanner;
+
+public class Exercicio_1 {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		
+		int soma = 0; int cont = 0; int val = 0;
+		
+		System.out.println("Ler um número? S/N");
+		String continua = s.next();
+
+		while (continua.equalsIgnoreCase("S")) {
+			System.out.println("Informe um valor");
+			soma += s.nextInt();
+			cont++;
+			
+			System.out.println("Ler um número ? S/N");
+			continua = s.next();
+		}
+		
+		System.out.println("A média é: " + (soma/cont));
+	}
+
+}
