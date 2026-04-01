@@ -1,0 +1,49 @@
+package Lista1;
+
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Exemplo_2 {
+
+	public static void main(String[] args) {
+	Scanner s = new Scanner(System.in);
+	DecimalFormat df = new DecimalFormat("###############0.0");
+	
+	
+	
+	System.out.println("Converter um valor ? S/N");
+	String continua = s.next();
+	String sequencia = "";
+	
+	while ( continua.equalsIgnoreCase("S")) {
+		
+		System.out.println("Informe um valor");
+		int valor = s.nextInt();
+		if (valor >= 0) {
+			
+		sequencia = "";
+		
+		while (valor >= 2) {
+			
+			int resto = valor % 2;
+			sequencia = resto + sequencia;
+			valor = valor /2;
+			
+		}
+		sequencia = valor + sequencia;
+		
+		System.out.println("Sequencia binária: " + sequencia);
+		}
+		
+		else
+			System.out.println("Valor incorreto");
+		
+		System.out.println("Converter um valor ? S/N");
+		continua = s.next();
+	}
+	
+   System.out.println("Fim");
+   
+	}
+
+}
