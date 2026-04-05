@@ -1,0 +1,61 @@
+package Lista1;
+
+import java.util.Scanner;
+
+public class Exercicio_3 {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+
+		String mercadoria = "S";
+
+		int lucroBaixo = 0;
+		int lucroMedio = 0;
+		int lucroAlto = 0;
+
+		double totalCompra = 0;
+		double totalVenda = 0;
+
+		while (mercadoria.equalsIgnoreCase("S")) {
+
+		    System.out.println("Digite o preço de compra: ");
+		    double compra = s.nextDouble();
+
+		    System.out.println("Digite o preço de venda: ");
+		    double venda = s.nextDouble();
+
+		    double lucro = ((venda - compra) / compra) * 100;
+
+		    // classificação
+		    if (lucro < 10) {
+		        lucroBaixo++;
+		    } else if (lucro <= 20) {
+		        lucroMedio++;
+		    } else {
+		        lucroAlto++;
+		    }
+
+		    // acumulando totais
+		    totalCompra += compra;
+		    totalVenda += venda;
+
+		    // perguntar se continua
+		    System.out.println("Deseja continuar? (S/N)");
+		    mercadoria = s.next();
+		}
+
+		// resultados finais
+		System.out.println("Lucro < 10%: " + lucroBaixo);
+		System.out.println("Lucro entre 10% e 20%: " + lucroMedio);
+		System.out.println("Lucro > 20%: " + lucroAlto);
+
+		System.out.println("Total de compra: " + totalCompra);
+		System.out.println("Total de venda: " + totalVenda);
+		System.out.println("Lucro total: " + (totalVenda - totalCompra));
+		
+		
+	}
+	
+}
+
+
