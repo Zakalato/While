@@ -1,0 +1,50 @@
+package Lista1;
+
+import java.util.Scanner;
+
+public class Exercicio_4 {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        double maior = 0;
+        String cursoMaior = "";
+
+        System.out.println("Digite o código do curso (ou X para sair):");
+        String curso = s.next();
+
+        while (!curso.equalsIgnoreCase("X")) {
+
+            System.out.println("Número de vagas:");
+            int vagas = s.nextInt();
+
+            System.out.println("Número de candidatos masculinos:");
+            int masculino = s.nextInt();
+
+            System.out.println("Número de candidatos femininos:");
+            int feminino = s.nextInt();
+
+            int totalCandidatos = masculino + feminino;
+
+            double candidatosPorVaga = totalCandidatos / (double) vagas;
+            double porcentagemFeminino = (feminino * 100.0) / totalCandidatos;
+
+            System.out.println("Candidatos por vaga: " + candidatosPorVaga);
+            System.out.println("Porcentagem feminino: " + porcentagemFeminino + "%");
+
+            if (candidatosPorVaga > maior) {
+                maior = candidatosPorVaga;
+                cursoMaior = curso;
+            }
+
+            System.out.println("\nDigite o código do curso (ou X para sair):");
+            curso = s.next();
+        }
+
+        System.out.println("\n=== RESULTADO FINAL ===");
+        System.out.println("Maior número de candidatos por vaga: " + maior);
+        System.out.println("Curso com maior concorrência: " + cursoMaior);
+
+        s.close();
+    }
+}
