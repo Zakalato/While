@@ -1,0 +1,40 @@
+package Lista1;
+
+import java.util.Scanner;
+
+public class Exercicio_7 {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        System.out.println("Digite um número de 4 dígitos (ou fora do intervalo 1000-9999 para sair):");
+        int num = s.nextInt();
+
+       
+        while (num >= 1000 && num <= 9999) {
+           
+            int parte1 = num / 100; 
+            int parte2 = num % 100; 
+            
+            
+            int soma = parte1 + parte2;
+            int resultado = soma * soma; 
+            
+           
+            System.out.println("Processando: " + parte1 + " + " + parte2 + " = " + soma);
+            System.out.println(soma + " ao quadrado = " + resultado);
+
+            if (resultado == num) {
+                System.out.println("O número " + num + " POSSUI a característica!\n");
+            } else {
+                System.out.println("O número " + num + " NÃO possui a característica.\n");
+            }
+
+            System.out.println("Digite o próximo número (ou um fora do intervalo para parar):");
+            num = s.nextInt();
+        }
+
+        System.out.println("Algoritmo encerrado. Você digitou um valor inválido para 4 dígitos.");
+        s.close();
+    }
+}
