@@ -1,0 +1,50 @@
+package Lista1;
+
+import java.util.Scanner;
+
+public class Exercicio_6 {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		
+	    String continua;
+		
+		System.out.println("Deseja calcular um número? S/N");
+		continua = s.next();
+	
+		while (continua.equalsIgnoreCase("S")) {
+			
+		 System.out.println("Digite um número:");
+		 int num = s.nextInt();
+		 
+		int original = num;
+			 
+		int impar = 1;
+		int raiz = 0;
+		
+		while (num > 0) {
+			num = num - impar;
+			impar = impar + 2;
+			raiz++;
+		}
+		
+		if (num == 0) {
+            System.out.println("A raiz exata de " + original + " é: " + raiz);
+        }
+		
+		else {
+            System.out.println("A raiz aproximada de " + original + " é: " + raiz);
+        }
+			 
+		System.out.println("\nDeseja calcular outro número? S/N");
+        continua = s.next();
+        
+		}
+		
+		System.out.println("its over");
+		
+		s.close();
+
+	}
+
+}
