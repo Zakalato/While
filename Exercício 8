@@ -1,0 +1,46 @@
+package Lista1;
+
+import java.util.Scanner;
+
+public class Exercicio_8 {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		
+		String continua;
+		
+		
+		System.out.println("Deseja analisar um número?");
+		continua = s.next();
+		
+		while (continua.equalsIgnoreCase("S")) {
+			
+			System.out.println("Qual número você deseja analisar:");
+			int num = s.nextInt();
+			
+			int a = 1; int b = 1;
+
+            while (a <= num) {
+            System.out.println(a);
+            
+            
+
+           int prox = a + b; 
+            a = b;            
+            b = prox;
+
+            
+            }
+            
+            System.out.println("Deseja novamente analisar um número?");
+    		continua = s.next();
+    		
+		}
+		
+		System.out.println("Fim do programa");
+		
+		s.close();
+		
+	}
+
+}
