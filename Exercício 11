@@ -1,0 +1,33 @@
+package Lista1;
+
+import java.util.Scanner;
+
+public class Exercicio_11 {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		
+int num = 1;
+int num1 = 1;
+		
+		while (num >= 1 && num <= 500 ) {
+			num++; 
+			if (num % 5 == 0 ) {
+			
+		System.out.println("Mults de 5: " + num);
+		
+			}
+			while (num1 >= 1 && num1 < 500 ) {
+				num1++;
+				if (num1 % 3 == 0) {
+					System.out.println("Mults de 3: " + num1);
+				}
+			}
+			
+			
+		}
+
+	}
+
+}
+
