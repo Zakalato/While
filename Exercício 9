@@ -1,0 +1,46 @@
+package Lista1;
+
+import java.util.Scanner;
+
+public class Exercicio_9 {
+
+    public static void main(String[] args) {
+
+        Scanner s = new Scanner(System.in);
+
+        int limite = 20;
+
+        System.out.println("Digite o primeiro valor:");
+        int a = s.nextInt(); // A1
+
+        System.out.println("Digite o segundo valor:");
+        int b = s.nextInt(); // A2
+
+        // imprime os dois primeiros termos
+        System.out.println(a);
+        System.out.println(b);
+
+        int posicao = 3; // começa no terceiro termo
+
+        while (posicao <= limite) {
+
+            int proximo;
+
+            if (posicao % 2 != 0) { 
+                // posição ímpar -> soma
+                proximo = b + a;
+            } else {
+                // posição par -> subtração
+                proximo = b - a;
+            }
+
+            System.out.println(proximo);
+
+            // atualiza os valores
+            a = b;
+            b = proximo;
+
+            posicao++;
+        }
+    }
+}
