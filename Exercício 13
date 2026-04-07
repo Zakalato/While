@@ -1,0 +1,28 @@
+package Lista1;
+
+import java.util.Scanner;
+
+public class Exercicio_13 {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		
+		double A = 5000000;
+		double B = 7000000;
+		double taxA = 0.03;
+		double taxB = 0.02;
+		int temp = 0;
+		
+		while(A <= B) {
+			
+			A += A * taxA;
+            B += B * taxB;
+            temp++;
+			
+		}
+		
+		 System.out.println("Anos necessários: " + temp);
+
+	}
+
+}
