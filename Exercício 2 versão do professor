@@ -1,0 +1,24 @@
+package Lista1;
+
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Exercicio_2 {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		DecimalFormat df = new DecimalFormat("0.00");
+
+		int F = 50;
+		
+		while (F <= 150) {
+			double C = 5.0/9.0 * (F - 32);
+			System.out.println(F + "F= " + df.format(C) + "C");
+			F++;
+			
+			}
+		
+		}
+		
+	}
+	
