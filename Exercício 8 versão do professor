@@ -1,0 +1,45 @@
+package Lista1;
+
+import java.util.Scanner;
+
+public class Exercicio_8 {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		
+		String continua;
+		
+		
+		System.out.println("Deseja analisar um número?");
+		continua = s.next();
+		
+		while (continua.equalsIgnoreCase("S")) {
+			
+			System.out.println("Informe op teto da série");
+			int teto = s.nextInt();
+			
+			int A = 0;
+			int TA = 1;
+			int TAA = 1;
+			System.out.print("1 1");
+
+            while (A <= teto) {
+            	A = TA + TAA;
+            System.out.print(" " + A );
+            TAA = TA;
+            TA = A;
+
+            }
+            
+            System.out.println("  Deseja novamente analisar um número?");
+    		continua = s.next();
+    		
+		}
+		
+		System.out.println("BRUTAL");
+		
+		s.close();
+		
+	}
+
+}
